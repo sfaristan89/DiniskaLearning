@@ -16,15 +16,56 @@ public class Main {
         System.out.println();
         dividing(19,2);
         System.out.println();
-        divByModule(19,2);
+        divByModule(867767661,10);
         System.out.println();
-        String phoneNumber = "+380674739224";
-        if (isValidE123(phoneNumber)) {
-            System.out.print(phoneNumber + " is valid phone number");
-        }else {
-            System.out.print(phoneNumber + " is invalid Phone number");
-        }
 
+        String phone1 = "3454543";
+        String phone2 = "mama mia";
+        String phone3 = "+380674739224";
+        String[] phoneNumbers= {phone1,phone2,phone3};
+
+        for (int i = 0; i < phoneNumbers.length; i++) {
+            String phoneNumber = phoneNumbers[i];
+            System.out.println("Please enter Phone number:");
+            if (isValidE123(phoneNumber)) {
+                System.out.println(phoneNumber);
+                System.out.println("This is valid Phone number");
+            } else {
+                System.out.println(phoneNumber);
+                System.out.println("This is invalid Phone number");
+            }
+            System.out.println();
+        }
+        long sum = sumOfAll(867767667);
+        System.out.println(sum);
+        System.out.println();
+
+
+        /*long num = 380674739224;
+        long sum = 0;
+        while (num > 0) {
+            sum = sum + num % 10;
+            num = num / 10;
+        }
+        System.out.println(sum);*/
+    }
+
+    /*static long sumDigits(long i) {
+        for (long k = i; k > 10; k++ ) {
+
+        }
+        return i == 0 ? 0 : i % 10 + sumDigits(i / 10);
+    }*/
+
+    private static long sumOfAll(long num) {
+        long sum = 0;
+        if(num > 10) {
+            sum += num % 10;
+            while((num = num / 10) >= 1) {
+                sum += (num > 10) ? num % 10 : num;
+            }
+        }
+        return sum;
     }
 
     static void loop() {
