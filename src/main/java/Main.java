@@ -21,7 +21,7 @@ public class Main {
 
         String phone1 = "3454543";
         String phone2 = "mama mia";
-        String phone3 = "+380674739224";
+        String phone3 = "+38067123";
         String[] phoneNumbers= {phone1,phone2,phone3};
 
         for (int i = 0; i < phoneNumbers.length; i++) {
@@ -37,15 +37,17 @@ public class Main {
             System.out.println();
         }
 
-        char[] result = phone3.replaceAll("\\+","").toCharArray();
-        for ( int i=0; i<result.length; i++) {
-        }
+        String result = phone3.replaceAll("\\+","");
+        /*for ( int i=0; i<result.length; i++) {
+        }*/
         System.out.println(result);
 
+        int intSum = sumOfAll(Integer.parseInt(result));
+        System.out.println(intSum);
 
-        long sum = sumOfAll(867767667);
+        /*long sum = sumOfAll(867767667);
         System.out.println(sum);
-        System.out.println();
+        System.out.println();*/
 
 
         /*long num = 380674739224;
@@ -64,8 +66,8 @@ public class Main {
         return i == 0 ? 0 : i % 10 + sumDigits(i / 10);
     }*/
 
-    private static long sumOfAll(long num) {
-        long sum = 0;
+    private static int sumOfAll(int num) {
+        int sum = 0;
         if(num > 10) {
             sum += num % 10;
             while((num = num / 10) >= 1) {
