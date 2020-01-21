@@ -36,6 +36,13 @@ public class Main {
             }
             System.out.println();
         }
+
+        char[] result = phone3.replaceAll("\\+","").toCharArray();
+        for ( int i=0; i<result.length; i++) {
+        }
+        System.out.println(result);
+
+
         long sum = sumOfAll(867767667);
         System.out.println(sum);
         System.out.println();
