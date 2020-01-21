@@ -48,36 +48,21 @@ public class Main {
             ch[i] = result.charAt(i);
         }
 
-        for (char c : ch) {
+        /*for (char c : ch) {
             System.out.print(c);
-        }
+        }*/
+
 
         System.out.println();
-        System.out.println(ch.length);
-        System.out.println(ch[0]);
-        System.out.println(ch[1]);
-        System.out.println(ch[2]);
-        System.out.println(ch[3]);
-        System.out.println(ch[4]);
-        System.out.println(ch[5]);
-        System.out.println(ch[6]);
-        System.out.println(ch[7]);
-        System.out.println(ch[8]);
-        System.out.println(ch[9]);
-        System.out.println(ch[10]);
-        System.out.println(ch[11]);
-        System.out.println();
 
-        int summa = 0;
+        int summa1 = 0;
         for (int i = 0; i < ch.length; i++){
-            summa += ch[i];
-            System.out.println(ch[i]);
-            System.out.println(summa);
+            summa1 += Character.getNumericValue(ch[i]);
         }
-        System.out.println(summa);
+        System.out.println(summa1);
 
-        int df = ch[0] + 0;
-        System.out.println(df);
+
+
 
 
         /*System.out.println();
