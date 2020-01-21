@@ -21,7 +21,7 @@ public class Main {
 
         String phone1 = "3454543";
         String phone2 = "mama mia";
-        String phone3 = "+38067123";
+        String phone3 = "+380671234567";
         String[] phoneNumbers= {phone1,phone2,phone3};
 
         for (int i = 0; i < phoneNumbers.length; i++) {
@@ -42,8 +42,34 @@ public class Main {
         }*/
         System.out.println(result);
 
-        int intSum = sumOfAll(Integer.parseInt(result));
-        System.out.println(intSum);
+        char[] ch = new char[result.length()];
+
+        for (int i = 0; i < result.length(); i++) {
+            ch[i] = result.charAt(i);
+        }
+
+        for (char c : ch) {
+            System.out.print(c);
+        }
+        System.out.println(ch.length);
+
+        int summa = 0;
+
+        for (int i = 0; i < ch.length; i++){
+            summa += ch[i];
+        }
+
+
+        /*System.out.println();
+        int size = result.length();
+        int[] results = new int[size];
+        for ( int x=0; x<size; x++) {
+            results[x] = Integer.parseInt(result);
+        }
+        System.out.println(result.length());*/
+
+        /*int intSum = sumOfAll(Integer.parseInt(result));
+        System.out.println(intSum);*/
 
         /*long sum = sumOfAll(867767667);
         System.out.println(sum);
