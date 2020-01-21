@@ -51,13 +51,15 @@ public class Main {
         for (char c : ch) {
             System.out.print(c);
         }
-        System.out.println(ch.length);
+
+        System.out.println();
 
         int summa = 0;
-
         for (int i = 0; i < ch.length; i++){
             summa += ch[i];
+            System.out.println(summa);
         }
+        System.out.println(summa);
 
 
         /*System.out.println();
