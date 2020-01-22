@@ -38,64 +38,79 @@ public class Main {
         }
 
         String result = phone3.replaceAll("\\+","");
-        /*for ( int i=0; i<result.length; i++) {
-        }*/
-        System.out.println(result);
 
-        char[] ch = new char[result.length()];
+        /*char[] ch1 = new char[result.length()];
 
         for (int i = 0; i < result.length(); i++) {
-            ch[i] = result.charAt(i);
-        }
-
-        /*for (char c : ch) {
-            System.out.print(c);
+            ch1[i] = result.charAt(i);
         }*/
 
-
-        System.out.println();
-
+        char[] ch1 = result.toCharArray();
         int summa1 = 0;
-        for (int i = 0; i < ch.length; i++){
-            summa1 += Character.getNumericValue(ch[i]);
+        for (int i = 0; i < ch1.length; i++){
+            summa1 += Character.getNumericValue(ch1[i]);
         }
-        System.out.println(summa1);
+        System.out.println("1st round of calculation: " + summa1);
 
-
-
-
-
-        /*System.out.println();
-        int size = result.length();
-        int[] results = new int[size];
-        for ( int x=0; x<size; x++) {
-            results[x] = Integer.parseInt(result);
+        /*int summa1 = 0;
+        for (int i = 0; i < ch1.length; i++){
+            summa1 += Character.getNumericValue(ch1[i]);
         }
-        System.out.println(result.length());*/
+        System.out.println(summa1);*/
 
-        /*int intSum = sumOfAll(Integer.parseInt(result));
-        System.out.println(intSum);*/
+        char[] ch2 = String.valueOf(summa1).toCharArray();
 
-        /*long sum = sumOfAll(867767667);
-        System.out.println(sum);
-        System.out.println();*/
-
-
-        /*long num = 380674739224;
-        long sum = 0;
-        while (num > 0) {
-            sum = sum + num % 10;
-            num = num / 10;
+        int summa2 = 0;
+        for (int i = 0; i < ch2.length; i++){
+            summa2 += Character.getNumericValue(ch2[i]);
         }
-        System.out.println(sum);*/
+        System.out.println("2nd round of calculation: " + summa2);
+
+        char[] ch3 = String.valueOf(summa2).toCharArray();
+
+        int summa3 = 0;
+        for (int i = 0; i < ch3.length; i++){
+            summa3 += Character.getNumericValue(ch3[i]);
+        }
+        System.out.println("3rd round of calculation: " + summa3);
+
+        switch(summa3) {
+            case 0:
+                System.out.println("Final result is: Zero");
+                break;
+            case 1:
+                System.out.println("Final result is: One");
+                break;
+            case 2:
+                System.out.println("Final result is: Two");
+                break;
+            case 3:
+                System.out.println("Final result is: Three");
+                break;
+            case 4:
+                System.out.println("Final result is: Four");
+                break;
+            case 5:
+                System.out.println("Final result is: Five");
+                break;
+            case 6:
+                System.out.println("Final result is: Six");
+                break;
+            case 7:
+                System.out.println("Final result is: Seven");
+                break;
+            case 8:
+                System.out.println("Final result is: Eight");
+                break;
+            case 9:
+                System.out.println("Final result is: Nine");
+                break;
+
+            default:
+                System.out.println("Invalid number");
+        }
+
     }
-
-    /*static long sumDigits(long i) {
-        for (long k = i; k > 10; k++ ) {
-
-        }
-        return i == 0 ? 0 : i % 10 + sumDigits(i / 10);
-    }*/
 
     private static int sumOfAll(int num) {
         int sum = 0;
