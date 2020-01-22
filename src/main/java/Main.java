@@ -18,13 +18,13 @@ public class Main {
         System.out.println("Phone number is correct");
         long phoneNumber = Long.parseLong(inputPhoneNumber);
         long sum = getDigitsSum(phoneNumber);
-        System.out.println("1 round of calculation, sum is:" + sum);
+        System.out.println("1 round of calculation...\nSum is: " + sum);
 
         int timesCalculation = 1;
         while (sum >= 10) {
             timesCalculation++;
             sum = getDigitsSum(sum);
-            System.out.println(timesCalculation + " round of calculation, sum is:" + sum);
+            System.out.println(timesCalculation + " round of calculation...\nSum is: " + sum);
         }
 
         switch((int) sum) {
