@@ -16,7 +16,7 @@ public class Main {
         System.out.println();
         dividing(19,2);
         System.out.println();
-        divByModule(867767661,10);
+        divByModule(7,10);
         System.out.println();
 
         String phone1 = "3454543";
@@ -51,12 +51,6 @@ public class Main {
             summa1 += Character.getNumericValue(ch1[i]);
         }
         System.out.println("1st round of calculation: " + summa1);
-
-        /*int summa1 = 0;
-        for (int i = 0; i < ch1.length; i++){
-            summa1 += Character.getNumericValue(ch1[i]);
-        }
-        System.out.println(summa1);*/
 
         char[] ch2 = String.valueOf(summa1).toCharArray();
 
@@ -109,6 +103,12 @@ public class Main {
             default:
                 System.out.println("Invalid number");
         }
+
+        int summa11 = sumOfAll(summa1);
+        System.out.println(summa11);
+
+        int summa22 = sumOfAll(summa11);
+        System.out.println(summa22);
 
     }
 
