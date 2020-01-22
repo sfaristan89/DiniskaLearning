@@ -10,7 +10,7 @@ public class Main {
         System.out.println("Please enter phone number");
         String inputPhoneNumber = reader.nextLine();
 
-        while (!inputPhoneNumber.matches("^(?:(?:\\+|0{0,2})((38)|8?))(0(39|50|6[3678]|73|9[1-9])\\d{7})$")) {
+        while (!inputPhoneNumber.matches("^(\\+|0{0,2})(38|8?)(0(39|50|6[3678]|73|9[1-9]))\\d{7}$")) {
             System.out.println("Phone number is incorrect.\nPlease enter the phone number:");
             inputPhoneNumber = reader.nextLine();
         }
